@@ -3,14 +3,17 @@
 .book {
   text-align: center;
 
+  h1 {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
   blockquote {
     position: relative;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    width: 25%;
     padding: 1em;
-    margin-top: 5em;
-    margin-bottom: 5em;
+    margin: 0;
+    margin-top: 3em;
+    margin-bottom: 3em;
 
     &:after {
       position: absolute;
@@ -24,50 +27,52 @@
     }
   }
 
-  article {
+  section#extracts {
     position: relative;
     box-sizing: border-box;
     text-align: justify;
-    padding: 2em;
-    border-collapse: collapse;
+    padding: 0.8em;
 
     p {
       position: relative;
       box-sizing: border-box;
-      padding: 1em;
       font-family: $seriousFont;
       font-size: 1.3em;
+      padding: 0.8em;
+      margin: 0;
 
       &:first-letter {
         font-size: 3em;
       }
     }
+  }
 
-    &:before, &:after {
-      position: absolute;
-      width: 50%;
-      height: 100%;
-      content: "";
-    }
+  section#author {
+    figure {
+      box-sizing: border-box;
+      padding: 2em;
 
-    &:before {
-      top: 0;
-      left: 0;
-      border-right: 1px solid;
-      border-top-right-radius: 20px;
-    }
-
-    &:after {
-      top: 0;
-      left: 50%;
-      border-left: 1px solid;
-      border-top-left-radius: 20px;
+      figcaption {
+        font-family: $seriousFont;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-bottom: 1em;
+      }
     }
   }
 
-  figure {
-    padding: 2em;
-    border: 1px solid;
-    border-radius: 10px;
+  section#recommended {
+    margin-top: 2em;
+
+    header {
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
+
+    article {
+      box-sizing: border-box;
+      padding: 15px;
+    }
   }
 }

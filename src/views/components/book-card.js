@@ -15,7 +15,6 @@ angular.module('bookstore')
     },
     templateUrl: 'views/components/book-card.html',
     controller: function($scope) {
-
     }
   };
 });

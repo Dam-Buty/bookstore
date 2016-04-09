@@ -16,13 +16,17 @@
     // $locationProvider.html5Mode(true);
   }])
   .controller("BookstoreController",
-  [ "$window", "$scope", "$rootScope", "$http",
-  function($window, $scope, $rootScope, $http) {
+  [ "$window", "$scope", "$rootScope", "$http", "$location",
+  function($window, $scope, $rootScope, $http, $location) {
     $rootScope.books = [];
     $rootScope.currentBook = null;
     $rootScope.indexes = {
       genres: {},
       topics: {}
+    };
+
+    $rootScope.navigate = function(bookId) {
+      $location.path("/details/" + bookId);
     };
 
     $scope.jsonURL = "assets/books.json";

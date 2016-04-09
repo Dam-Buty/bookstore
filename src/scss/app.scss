@@ -3,7 +3,10 @@
 body {
   background-color: $background;
   color: $primary;
-  padding: 2em;
+
+  section {
+    z-index: 10;
+  }
 
   figure {
     margin: 0;

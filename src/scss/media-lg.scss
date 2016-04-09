@@ -1,0 +1,44 @@
+
+
+/* PureCSS 'lg' Media Query */
+@media screen and (min-width: 64em) {
+  body {
+    .book {
+      section#extracts {
+        padding: 2em;
+
+        p {
+          padding: 1em;
+        }
+
+        &:before, &:after {
+          position: absolute;
+          width: 50%;
+          height: 100%;
+          content: "";
+        }
+
+        &:before {
+          top: 0;
+          left: 0;
+          border-right: 1px solid;
+          border-top-right-radius: 20px;
+        }
+
+        &:after {
+          top: 0;
+          left: 50%;
+          border-left: 1px solid;
+          border-top-left-radius: 20px;
+        }
+      }
+
+      section#author {
+        figure {
+          border: 1px solid;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

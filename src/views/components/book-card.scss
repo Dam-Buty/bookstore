@@ -1,9 +1,8 @@
 @import '../../scss/mixins.scss';
 
 .book-card {
+  box-sizing: border-box;
   position: relative;
-  border-radius: 10px;
-  border: 1px solid;
   padding: 0.9em;
   cursor: pointer;
 
@@ -23,14 +22,20 @@
 
   aside {
     position: absolute;
-    border-top-left-radius: 9px;
-    border-bottom-right-radius: 9px;
-    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
-    top: 0;
-    left: 0;
-    opacity: 0.9;
+    box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
     background-color: $matte;
-    padding: 1em;
-    line-height: 2em;
+    color: $secondary;
+    line-height: 1.5em;
+    right: -1em;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+
+    &.genre {
+      top: 2.5em;
+    }
+
+    &.topic {
+      top: 5em;
+    }
   }
 }

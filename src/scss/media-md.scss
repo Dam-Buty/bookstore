@@ -1,0 +1,29 @@
+
+
+/* PureCSS 'md' Media Query */
+@media screen and (min-width: 48em) {
+  body {
+    .book {
+      blockquote {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 25%;
+        margin-top: 5em;
+        margin-bottom: 5em;
+      }
+
+      section#recommended {
+        header {
+          font-size: 2em;
+        }
+      }
+
+      section#author {
+        figure {
+          border: 1px solid;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

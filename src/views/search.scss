@@ -1,20 +1,23 @@
 @import '../scss/mixins.scss';
 
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  z-index: 100;
+  opacity: 0.9;
 
   margin-bottom: 1em;
 
   text-align: center;
 
   form {
+    background-color: $background;
     width: 100%;
+    margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 
     input, select {
       margin-left: 1em;
+      color: $secondary;
     }
 
     label {
@@ -23,8 +26,7 @@ nav {
   }
 }
 
-section {
-  padding-top: 5em;
+section.search {
   article {
     box-sizing: border-box;
     padding: 15px;

@@ -1,0 +1,18 @@
+
+
+/* PureCSS 'xl' Media Query */
+@media screen and (min-width: 80em) {
+  body {
+    padding: 2em;
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    section.search {
+      padding-top: 5em;
+    }
+  }
+}

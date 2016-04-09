@@ -13,11 +13,6 @@ function($window, $scope, $rootScope, $location)  {
     genre: $scope.genres[0],
     topic: $scope.topics[0]
   };
-    // console.log('$scope');
-
-  $scope.navigate = function(bookId) {
-    $location.path("/details/" + bookId);
-  };
 }
 ]);
 })();
