@@ -1,0 +1,16 @@
+@import 'mixins.scss';
+
+body {
+  background-color: $background;
+  color: $primary;
+  padding: 2em;
+
+  figure {
+    margin: 0;
+    img {
+      border-radius: 10px;
+      margin: 0;
+      width: 100%;
+    }
+  }
+}

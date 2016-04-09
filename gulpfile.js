@@ -41,7 +41,8 @@ var paths = {
   vendorScripts: [
     path.join(base, node, "angular/angular.min.js"),
     path.join(base, node, "angular-route/angular-route.min.js"),
-    path.join(base, node, "angular-utils-pagination/dirPagination.js")
+    path.join(base, node, "angular-utils-pagination/dirPagination.js"),
+    path.join(base, node, "moment/min/moment-with-locales.min.js")
   ],
   styles: [path.join(base, src, "**/*.scss")],
   vendorCSS: [
@@ -75,9 +76,9 @@ gulp.task('scripts', function() {
     gulp.src(paths.scripts)
     .pipe(debug({title: 'Adding script file :'}))
     .pipe(concat('app.js'))
-    .pipe(stripDebug())
+    // .pipe(stripDebug())
     .pipe(ngAnnotate())
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(path.join(base, dst, "js")));
 });
 
@@ -86,8 +87,8 @@ gulp.task('vendorScripts', function() {
     gulp.src(paths.vendorScripts)
     .pipe(debug({title: 'Adding vendor script :'}))
     .pipe(concat('vendor.js'))
-    .pipe(stripDebug())
-    .pipe(uglify())
+    // .pipe(stripDebug())
+    // .pipe(uglify())
     .pipe(gulp.dest(path.join(base, dst, "js")));
 });
 

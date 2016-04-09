@@ -1,0 +1,36 @@
+@import '../../scss/mixins.scss';
+
+.book-card {
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 0.9em;
+  cursor: pointer;
+
+  figcaption {
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+    text-align: center;
+    font-family: $seriousFont;
+    font-size: 1.5em;
+    background-color: $highlight;
+    opacity: 0.9;
+  }
+
+  aside {
+    position: absolute;
+    border-top-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    background-color: $matte;
+    padding: 1em;
+    line-height: 2em;
+  }
+}

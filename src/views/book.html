@@ -1,0 +1,21 @@
+<section class="book">
+  <h1>{{ book.name }}</h1>
+
+  <p><em>published {{ book.$ago }} ago, on {{ book.$date }}</em></p>
+
+  <blockquote>
+    {{ book.description }}
+  </blockquote>
+
+  <article class="pure-u-g">
+    <p ng-repeat="paragraph in book.introduction" class="pure-u-1-2">{{ paragraph.content }}</p>
+  </article>
+
+  <footer class="pure-u-g">
+
+    <figure class="pure-u-1 pure-u-md-1-5">
+      <img ng-src="{{ book.author.avatar + '?' + book.id }}" alt="Author picture"/>
+      <figcaption>by {{ book.author.name }}</figcaption>
+    </figure>
+  </footer>
+</section>

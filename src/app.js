@@ -7,7 +7,7 @@
       templateUrl: 'views/search.html',
       controller: 'SearchController'
     })
-    .when('/:book', {
+    .when('/details/:bookId', {
       templateUrl: 'views/book.html',
       controller: 'BookController'
     })
@@ -19,6 +19,7 @@
   [ "$window", "$scope", "$rootScope", "$http",
   function($window, $scope, $rootScope, $http) {
     $rootScope.books = [];
+    $rootScope.currentBook = null;
     $rootScope.indexes = {
       genres: {},
       topics: {}
@@ -43,6 +44,7 @@
         if (topics.indexOf(topic) === -1) { topics.push(topic); }
       });
 
+      // The data is stored in the rootScope so it can be accessed by all controllers
       $rootScope.books = books;
       $rootScope.genres = genres;
       $rootScope.topics = topics;

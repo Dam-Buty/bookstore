@@ -1,0 +1,73 @@
+@import '../scss/mixins.scss';
+
+.book {
+  text-align: center;
+
+  blockquote {
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    padding: 1em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+
+    &:after {
+      position: absolute;
+      top: -2em;
+      bottom: -2em;
+      left: 25%;
+      content: "";
+      width: 50%;
+      border-bottom: 1px solid;
+      border-top: 1px solid;
+    }
+  }
+
+  article {
+    position: relative;
+    box-sizing: border-box;
+    text-align: justify;
+    padding: 2em;
+    border-collapse: collapse;
+
+    p {
+      position: relative;
+      box-sizing: border-box;
+      padding: 1em;
+      font-family: $seriousFont;
+      font-size: 1.3em;
+
+      &:first-letter {
+        font-size: 3em;
+      }
+    }
+
+    &:before, &:after {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      content: "";
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      border-right: 1px solid;
+      border-top-right-radius: 20px;
+    }
+
+    &:after {
+      top: 0;
+      left: 50%;
+      border-left: 1px solid;
+      border-top-left-radius: 20px;
+    }
+  }
+
+  figure {
+    padding: 2em;
+    border: 1px solid;
+    border-radius: 10px;
+  }
+}

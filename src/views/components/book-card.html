@@ -1,0 +1,13 @@
+<div class="book-card">
+  <figure>
+    <!-- We add an arbitrary argument (the book's id) to the image url so we don't
+         reuse the same image from cache for all books -->
+    <img class="pure-img" ng-src="{{ book.cover + '?' + book.id }}" alt="Book cover"/>
+    <figcaption>
+      <strong>{{ book.name }}</strong><br/>
+      by<br/>
+      {{ book.author.name }}
+    </figcaption>
+  </figure>
+  <aside>{{ book.genre.category }}<br/>{{ book.genre.name }}</aside>
+</div>
