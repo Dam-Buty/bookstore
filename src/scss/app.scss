@@ -3,9 +3,21 @@
 body {
   background-color: $background;
   color: $primary;
+  overflow-x: hidden;
+
+  main#loading {
+    text-align: center;
+    font-size: 10em;
+    font-family: $seriousFont;
+    animation-name: palpitation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
 
   section {
-    z-index: 10;
+    z-index: 10; // used to put the content behind the nav in the search page
   }
 
   figure {
@@ -16,4 +28,9 @@ body {
       width: 100%;
     }
   }
+}
+
+@keyframes palpitation {
+    from {transform: scale(1)}
+    to {transform: scale(1.5)}
 }

@@ -3,17 +3,19 @@
 nav {
   z-index: 100;
   opacity: 0.9;
+  background-color: $background;
 
   margin-bottom: 1em;
 
   text-align: center;
 
   form {
-    background-color: $background;
     width: 100%;
-    margin-top: 1em;
     padding-top: 1em;
-    padding-bottom: 1em;
+
+    input {
+      width: 90%;
+    }
 
     input, select {
       margin-left: 1em;
@@ -30,5 +32,23 @@ section.search {
   article {
     box-sizing: border-box;
     padding: 15px;
+  }
+}
+
+ul.pagination {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+
+  li {
+    display: inline;
+    padding: 3px;
+
+    &.active {
+      a {
+        color: $secondary;
+        text-decoration: none;
+      }
+    }
   }
 }

@@ -1,5 +1,5 @@
 (function () {
-  angular.module("bookstore", ['ngRoute'])
+  angular.module("bookstore", ['ngRoute', 'angularUtils.directives.dirPagination'])
   .config(['$routeProvider', '$locationProvider',
   function($routeProvider, $locationProvider) {
     $routeProvider
@@ -12,8 +12,6 @@
       controller: 'BookController'
     })
     .otherwise("/");
-
-    // $locationProvider.html5Mode(true);
   }])
   .controller("BookstoreController",
   [ "$window", "$scope", "$rootScope", "$http", "$location",
@@ -25,6 +23,10 @@
       topics: {}
     };
 
+    /**
+    * Navigate to a given book.
+    * @param {String} bookId The book's ID
+    */
     $rootScope.navigate = function(bookId) {
       $location.path("/details/" + bookId);
     };
@@ -39,7 +41,7 @@
       var books = response.data;
       var genres = [], topics = [];
 
-      // Lists all genres and topics
+      // First we make a list of all available genres and topics
       books.forEach(function(book) {
         var genre = book.genre.category;
         var topic = book.genre.name;
@@ -53,6 +55,8 @@
       $rootScope.genres = genres;
       $rootScope.topics = topics;
 
+      // $scope.ready controls the display of a loading screen
+      // ( add a typo to jsonURL to see it in action :p )
       $scope.ready = true;
     }, function error(response) {
       console.log(response.status + " " + response.statusText);

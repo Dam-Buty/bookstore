@@ -1,17 +1,22 @@
 
 
-/* PureCSS 'md' Media Query */
+/* PureCSS 'md' Media Query (>768px) */
 @media screen and (min-width: 48em) {
   body {
-    .book {
-      blockquote {
-        margin-left: 50%;
-        transform: translateX(-50%);
-        width: 25%;
-        margin-top: 5em;
-        margin-bottom: 5em;
+    nav {
+      input {
+        width: auto !important;;
       }
+    }
 
+    ul.pagination {
+      li {
+        padding: 0.5em;
+        margin: 0.5em;
+      }
+    }
+
+    .book {
       section#recommended {
         header {
           font-size: 2em;

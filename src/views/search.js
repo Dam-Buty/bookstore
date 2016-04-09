@@ -9,10 +9,9 @@ angular.module('bookstore')
 .controller("SearchController",
 [ "$window", "$scope", "$rootScope", "$location",
 function($window, $scope, $rootScope, $location)  {
-  $scope.current = {
-    genre: $scope.genres[0],
-    topic: $scope.topics[0]
-  };
+  // This could be used to control the Search view but right now
+  // all the pagination, filtering and searching is declarative
+  // and resides in the search.html template
 }
 ]);
 })();

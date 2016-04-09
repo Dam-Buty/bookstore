@@ -13,9 +13,7 @@ angular.module('bookstore')
     scope: {
       book: "="
     },
-    templateUrl: 'views/components/book-card.html',
-    controller: function($scope) {
-    }
+    templateUrl: 'views/components/book-card.html'
   };
 });
 })();
