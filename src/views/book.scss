@@ -42,7 +42,10 @@
       margin: 0;
 
       &:first-letter {
+        float: left;
         font-size: 3em;
+        line-height: 1em;
+        padding-right: 0.5em;
       }
     }
   }

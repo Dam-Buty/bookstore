@@ -3,6 +3,10 @@
 /* PureCSS 'lg' Media Query (>1024px) */
 @media screen and (min-width: 64em) {
   body {
+    .book-card figcaption {
+      font-size: 1.1em;
+    }
+
     .book {
       /* We center the book's description */
       blockquote {
