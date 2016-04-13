@@ -2,4 +2,4 @@
          for each book then we'll always get the same cover image. Just adding an arbitrary
          parameter to the URL (namely the book's ID) is enough to bypass the cache
          and request a new random image for each book
-    --> <img class="pure-img" ng-src="{{ book.cover + '?' + book.id }}" alt="Book cover"><figcaption><strong>{{ book.name }}</strong><br>by<br>{{ book.author.name }}</figcaption></figure><aside class="genre">{{ book.genre.category }}</aside><aside class="topic">{{ book.genre.name }}</aside><aside class="likes">{{ book.likes }}</aside></div>
+    --> <img class="pure-img" src="assets/placeholder.png"> <img class="pure-img" ng-src="{{ book.cover + '?' + book.id }}" alt="Book cover"><figcaption><strong>{{ book.name }}</strong><br>by<br>{{ book.author.name }}</figcaption></figure><aside class="genre">{{ book.genre.category }}</aside><aside class="topic">{{ book.genre.name }}</aside><aside class="likes">{{ book.likes }}</aside></div>

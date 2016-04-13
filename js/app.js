@@ -70,6 +70,26 @@
 (function () {
 
 /*---------------------------------
+Book-card v1.0
+Briefly presents a book
+- expects 1 book
+---------------------------------*/
+
+angular.module('bookstore')
+.directive("bookCard", ["$rootScope", function($rootScope) {
+  return {
+    restrict: 'E',
+    scope: {
+      book: "="
+    },
+    templateUrl: 'views/components/book-card.html'
+  };
+}]);
+})();
+
+(function () {
+
+/*---------------------------------
 BookController v1.0
 The page with the details of a book
 ---------------------------------*/
@@ -174,24 +194,4 @@ function($window, $scope, $rootScope, $location)  {
   // and resides in the search.html template
 }
 ]);
-})();
-
-(function () {
-
-/*---------------------------------
-Book-card v1.0
-Briefly presents a book
-- expects 1 book
----------------------------------*/
-
-angular.module('bookstore')
-.directive("bookCard", ["$rootScope", function($rootScope) {
-  return {
-    restrict: 'E',
-    scope: {
-      book: "="
-    },
-    templateUrl: 'views/components/book-card.html'
-  };
-}]);
 })();
