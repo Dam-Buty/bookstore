@@ -5,8 +5,8 @@
          parameter to the URL (namely the book's ID) is enough to bypass the cache
          and request a new random image for each book
     -->
-    <img class="pure-img" src="assets/placeholder.png"/>
-    <img class="pure-img" ng-src="{{ book.cover + '?' + book.id }}" alt="Book cover"/>
+    <img class="pure-img placeholder" src="assets/placeholder.png"/>
+    <img class="pure-img cover" ng-src="{{ book.cover + '?' + book.id }}" alt="Book cover"/>
     <figcaption>
       <strong>{{ book.name }}</strong><br/>
       by<br/>
